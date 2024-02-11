@@ -1,7 +1,19 @@
 {
+  "version": 2,
+  "builds": [
+    {
+      "src": "/public", // Adjust based on your static assets directory
+      "use": "@vercel/static"
+    }
+  ],
   "routes": [
-    { "handle": "filesystem" },
-    { "src": "/sendMail", "dest": "/" },
-    { "src": "/(.*)", "dest": "/index.js" }
-  ]
+    {
+      "src": "/sendMail",
+      "dest": "/api/sendMail"
+    },
+    {
+      "src": "/",
+      "dest": "/"
+    }
+  ],
 }
