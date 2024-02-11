@@ -2,7 +2,7 @@
     "routes" : [
         {
       "src" : "/sendMail",
-      "dest" : "/"
+      "dest" : "/sendMail"
     },
       {
         "src" : "/",
