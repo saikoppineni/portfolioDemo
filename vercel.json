@@ -3,10 +3,6 @@
       {
         "src" : "/",
         "dest" : "/"
-      },
-      {
-        "src" : "/sendMail",
-        "dest" : "/sendMail"
       }
     ]
   }
