@@ -5,8 +5,8 @@
         "dest" : "/"
       },
       {
-        "src" : "/test",
-        "dest" : "/"
+        "src" : "/sendMail",
+        "dest" : "/sendMail"
       }
     ]
   }
