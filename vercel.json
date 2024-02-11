@@ -1,7 +1,7 @@
 {
   "routes": [
     { "handle": "filesystem" },
-    { "src": "/sendMail", "dest": "/index.js" },
+    { "src": "/sendMail", "dest": "/" },
     { "src": "/(.*)", "dest": "/index.js" }
   ]
 }
