@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "/public", // Adjust based on your static assets directory
+      "src": "/public",
       "use": "@vercel/static"
     }
   ],
