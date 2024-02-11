@@ -1,7 +1,7 @@
+require('dotenv').config();
 const bodyParser = require('body-parser');
 const express=require('express');
 const nodemailer = require('nodemailer');
-require('dotenv').config();
 const pg = require('pg');
 
 const { Pool } = pg;
@@ -17,6 +17,7 @@ const app = express();
 const port = 3000;
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended : true}));
+app.use(bodyParser.json());
 
 function sendingMail(name,email,comment){
 let transporter = nodemailer.createTransport({
