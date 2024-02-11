@@ -6,7 +6,7 @@
       },
       {
         "src" : "/sendMail",
-        "dest" : "/sendMails"
+        "dest" : "/sendMail"
       }
     ]
   }
