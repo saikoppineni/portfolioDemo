@@ -1,5 +1,9 @@
 {
     "routes" : [
+        {
+      "src" : "/sendMail",
+      "dest" : "/"
+    },
       {
         "src" : "/",
         "dest" : "/"
