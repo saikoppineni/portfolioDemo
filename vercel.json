@@ -1,12 +1,16 @@
 {
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.js" }
+  ],
   "routes": [
-    {
-      "src": "/",
-      "dest": "/"
-    },
+    { "handle": "filesystem" },
     {
       "src": "/sendMail",
-      "dest": "/"
+      "dest": "index.js"
+    },
+    {
+      "src": "/.*",
+      "dest": "/index.js"
     }
   ]
 }
