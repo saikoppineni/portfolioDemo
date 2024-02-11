@@ -1,12 +1,7 @@
 {
-    "routes" : [
-        {
-      "src" : "/sendMail",
-      "dest" : "/"
-    },
-      {
-        "src" : "/",
-        "dest" : "/"
-      }
-    ]
-  }
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/sendMail", "dest": "/index.js" },
+    { "src": "/(.*)", "dest": "/index.js" }
+  ]
+}
