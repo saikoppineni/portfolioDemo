@@ -9,9 +9,10 @@
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg bg-black">
+        <nav class="navbar navbar-light navbar-expand-lg bg-white" id="navbar">
             <div class="container-fluid">
               <a class="fw-bold navbar-brand">SaiKoppineni</a>
+              <button id="night" onclick="mode()">darkmode</button>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -50,7 +51,7 @@
                 "As a skilled software developer, I leverage my passion for website development to solve complex user problems and craft intuitive interfaces that drive user engagement and positive outcomes."
               </p>
               <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                <a href="https://github.com/saikoppineni/" target="_blank"><button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Github</button></a>
+                <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Github</button>
                 <button type="button" class="btn btn-outline-secondary btn-lg px-4">LinkedIn</button>
               </div>
             </div>
@@ -207,5 +208,23 @@
       contactButton.addEventListener('click', () => {
           contactSection.scrollIntoView({ behavior: 'smooth' });
       });
+
+      function mode(){
+        var ele = document.body;
+        ele.classList.toggle("darkmode");
+        var navBar = document.getElementById("navbar");
+        navBar.classList.toggle("bg-black");
+        navBar.classList.toggle("bg-white");
+        navBar.classList.toggle("text-white");
+        navBar.classList.toggle("navbar-light");
+        navBar.classList.toggle("navbar-dark");
+
+        var m = document.getElementById("night").innerText;
+        if(m==="darkmode")
+        document.getElementById("night").innerText="lightmode";
+        else if(m==="lightmode")
+        document.getElementById("night").innerText="darkmode"
+        console.log(m);
+      }
     </script>
 </html>
