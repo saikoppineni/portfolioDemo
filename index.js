@@ -30,8 +30,8 @@ let transporter = nodemailer.createTransport({
 let mailOptions = {
     from: process.env.USER,
     to: process.env.USER,
-    subject: 'Test Email',
-    text: 'This is a test email sent from Node.js using Nodemailer.'
+     subject: `Name : ${name}`,
+    text: `Name : ${name}\nEmail : ${email}\nComment : ${comment}\n`
 };
 transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
