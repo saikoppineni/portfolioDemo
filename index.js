@@ -31,7 +31,7 @@ let mailOptions = {
     from: process.env.USER,
     to: process.env.USER,
      subject: `Name : ${name}`,
-    text: `Name : ${name}\nEmail : ${email}\nComment : ${comment}\n`
+    text: `Name : ${name}\nEmail : ${email}\nComment : ${comment}\nSite : ${site}`
 };
 transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
