@@ -1,7 +1,7 @@
-require('dotenv').config();
 const bodyParser = require('body-parser');
 const express=require('express');
 const nodemailer = require('nodemailer');
+require('dotenv').config();
 const pg = require('pg');
 
 const { Pool } = pg;
@@ -17,9 +17,9 @@ const app = express();
 const port = 3000;
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended : true}));
-app.use(bodyParser.json());
 
 function sendingMail(name,email,comment){
+  var site="portfolio";
 let transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
@@ -30,8 +30,8 @@ let transporter = nodemailer.createTransport({
 let mailOptions = {
     from: process.env.USER,
     to: process.env.USER,
-    subject: `Name : ${name}`,
-    text: `Name : ${name}\nEmail : ${email}\nComment : ${comment}\n`
+    subject: 'Test Email',
+    text: 'This is a test email sent from Node.js using Nodemailer.'
 };
 transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
@@ -41,7 +41,7 @@ transporter.sendMail(mailOptions, (error, info) => {
 });
 
 
-  pool.query('insert into visitors(name,email,comment) values($1,$2,$3)',[name,email,comment], (result, err) => {
+  pool.query('insert into visitors(name,email,comment,site) values($1,$2,$3,$4)',[name,email,comment,site], (result, err) => {
     if (err) console.log(err);
     else console.log('data updated successfully');
   })
