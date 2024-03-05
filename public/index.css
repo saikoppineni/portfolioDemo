@@ -16,7 +16,6 @@
 .skillsItem{
     display: flex;
     margin: 13px;
-    border : solid 1px black;
     flex-wrap: wrap;
 }
 
